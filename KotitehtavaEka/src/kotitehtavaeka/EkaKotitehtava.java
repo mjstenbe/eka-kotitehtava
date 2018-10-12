@@ -12,7 +12,7 @@ public class EkaKotitehtava {
         Scanner lukija = new Scanner(System.in);
         int valinta;
         
-        LOPETA:
+        LOPETA: // mielenkiintoinen juttu että käytät break-komennon targettina LOPETA-merkintää. While ehdolla saisit sen myös loppumaan 
         while (true) {
             System.out.println("**********Juoma-Automaatti**********");
             System.out.println();
