@@ -22,7 +22,8 @@ public class JuomaAutomaatti {
         if (!onnistuuko()) {
             System.out.println("Ei onnistu, kiitos kuitenkin maksustasi");
         } else if (this.teetä > 0) {
-            this.teetä = this.teetä - 10;
+            this.teetä = this.teetä - 10; // Tähän pieni tarkennus. Jos tsekkaat vain että teetä > 0 niin teoriassa voi syntyä tilanne jossa teetä on jäljellä 1 yksikkö, mutta silti maksu veloitetaan ja tulostuu että tee valmistetaan.
+            // Turvallisempaa olisi tutkia onko this.teetä-10 > 0
             System.out.println("Odota hetki, teetä valmistetaan");
             System.out.println(toString());
         } else {
